@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "fjalla";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Fjalla_One/FjallaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: "anton";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/Anton_SC/AntonSC-Regular.ttf);
+}
+
+@font-face {
+  font-family: "eastsea";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf);
+}
+
+.anton{
+  font-family: 'anton';
+}
+
+.eastsea{
+  font-family: "eastsea";
+}
+
+.fjalla{
+  font-family: 'fjalla';
+}
