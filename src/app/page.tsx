@@ -2,20 +2,24 @@
 
 import Spline from "@splinetool/react-spline/next";
 import { TypeAnimation } from "react-type-animation";
-import "../assets/styles/font.css";
 import Navbar from "./navbar";
 import Link from "next/link";
+import localFont from "next/font/local"
+
+const eastSea = localFont({
+  src : "../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf"
+})
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Spline
         scene="https://prod.spline.design/GYoWaR-5AP6XM-zO/scene.splinecode"
         className="absolute left-[30%] transition-all ease-in-out duration-500"
       />
       <Navbar />
-      <div className="mt-32 ml-[17%]">
-        <div className="fjalla">
+      <div className="mt-32 h-[200vh] ml-[17%]">
+        <div>
           <div className="text-[3rem]">Hello</div>
           <div className="text-[5rem] font-bold">{`I'm M.Ahmadi`}</div>
         </div>
@@ -31,7 +35,7 @@ export default function Home() {
             2000,
           ]}
           wrapper="span"
-          className="eastsea block"
+          className={`block ${eastSea.className}`}
           speed={30}
           style={{ fontSize: "3rem" }}
           repeat={Infinity}

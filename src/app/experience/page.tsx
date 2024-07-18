@@ -1,6 +1,8 @@
+import Navbar from '../navbar';
 const EXperience = () => {
   return ( <>
-  hello world
+    <Navbar/>
+    <div className='h-[200vh]'>hello experience</div>
   </> );
 }
  
