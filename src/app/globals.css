@@ -8,8 +8,6 @@ body {
   color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.active{
+  @apply translate-y-1 ;
 }

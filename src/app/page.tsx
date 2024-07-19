@@ -1,23 +1,19 @@
-"use client";
-
-import Spline from "@splinetool/react-spline/next";
-import { TypeAnimation } from "react-type-animation";
-import Navbar from "./navbar";
+import { Spline } from "../lib/spline";
+import { TypeAnimation } from "../lib/typeAnimation";
 import Link from "next/link";
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 
 const eastSea = localFont({
-  src : "../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf"
-})
+  src: "../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
+});
 
 export default function Home() {
   return (
     <div>
       <Spline
         scene="https://prod.spline.design/GYoWaR-5AP6XM-zO/scene.splinecode"
-        className="absolute left-[30%] transition-all ease-in-out duration-500"
+        className="absolute left-[30%] bottom-[0%]"
       />
-      <Navbar />
       <div className="mt-32 h-[200vh] ml-[17%]">
         <div>
           <div className="text-[3rem]">Hello</div>
@@ -43,7 +39,7 @@ export default function Home() {
         <Link
           className="border rounded-md px-4 py-3 mt-7 inline-block fjalla hover:bg-slate-300
            hover:text-black transition-all ease-in-out duration-500 "
-          href="/"
+          href="/about"
         >
           About me
         </Link>
