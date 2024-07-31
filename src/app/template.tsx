@@ -1,8 +1,10 @@
 import Navbar from '../components/navbar';
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  return <div>
+  return (
+    <div className='px-2'>
       <Navbar />
-      {children}
+      <div>{children}</div>
     </div>
+  );
 }

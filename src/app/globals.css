@@ -9,5 +9,32 @@ body {
 }
 
 .active{
-  @apply translate-y-1 ;
+  @apply text-slate-200 font-medium border-b-2 border-white;
+}
+
+.active::after{
+  content: ' ';
+  border-bottom: 3px solid white;
+  width: 10px;
+}
+
+.nav-item{
+  @apply px-5 cursor-pointer transition-all ease-in-out duration-1000 py-7;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2f2f2f;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #494949;
 }
