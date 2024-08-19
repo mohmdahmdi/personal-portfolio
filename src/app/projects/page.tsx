@@ -1,20 +1,13 @@
-"use client"
 
-import api from "@/api/api";
-import { IRepos } from "@/interfaces/interfaces";
-import { use, useEffect, useState } from "react";
+import api from "../../api/api";
+import useAxios from "../../hooks/useAxios";
+import ProjectsComp from './../../components/projects/projects';
 
 const Projects = () => {
-  const [repos, setRepos] : [IRepos, any] = useState({})
-
-  useEffect(()=>{
-    const response = api.get("/users/mohmdahmdi/repos")
-  },[])
-
   return (
-    <>
-      <button></button>
-    </>
+    <div className="relative h-[200vh]">
+      <ProjectsComp />
+    </div>
   );
 };
 

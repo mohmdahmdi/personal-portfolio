@@ -10,6 +10,10 @@ const eastSea = localFont({
   src: "../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
 });
 
+const ubuntuBold = localFont({
+  src: "../assets/fonts/Ubuntu/Ubuntu-Bold.ttf",
+});
+
 export default function Home() {
   return (
     <div>
@@ -28,7 +32,7 @@ export default function Home() {
       <div className="mt-32 ml-[17%]">
         <div>
           <div className="text-[3rem] translate-y-4">Hello</div>
-          <div className="text-[5rem] font-bold">{`I'm M.Ahmadi`}</div>
+          <div className={`text-[5rem] ${ubuntuBold.className}`}>{`I'm M.Ahmadi`}</div>
         </div>
         <TypeAnimation
           sequence={[
