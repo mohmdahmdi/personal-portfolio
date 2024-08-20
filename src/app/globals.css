@@ -8,21 +8,19 @@ body {
   color: white;
 }
 
-.active{
+.active {
   @apply text-slate-200 font-medium border-b border-black translate-y-[0.8px];
 }
 
-.active::after{
-  content: ' ';
-  border-bottom: 3px solid white;
-  width: 10px;
+.active-sort {
+  @apply text-slate-200 font-medium;
 }
 
-.nav-item{
-  @apply px-5 cursor-pointer py-7;
+.nav-item {
+  @apply px-5 cursor-pointer py-7 transition-all ease-in-out duration-500;
 }
 
-.center{
+.center {
   @apply top-[330px] -translate-y-1/2 left-[50%] -translate-x-1/2;
 }
 

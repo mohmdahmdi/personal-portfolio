@@ -3,7 +3,6 @@ import { TypeAnimation } from "../lib/typeAnimation";
 import Link from "next/link";
 import localFont from "next/font/local";
 import Image from "next/image";
-import arrow from "../assets/pngs/arrow.png"
 import pattern from "../assets/pngs/Pattern.png";
 
 const eastSea = localFont({
@@ -55,6 +54,7 @@ export default function Home() {
           className="border rounded-md px-4 py-3 mt-7 inline-block fjalla hover:bg-slate-300
            hover:text-black transition-all ease-in-out duration-500 -translate-y-2 "
           href="/about"
+          
         >
           About me
         </Link>
