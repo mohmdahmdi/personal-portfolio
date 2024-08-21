@@ -1,8 +1,8 @@
 interface IRepos {
-  name?: string;
+  name: string;
   html_url?: string;
   description?: string;
-  created_at?: string;
+  created_at: string;
   [key: string]: any;
 }
 

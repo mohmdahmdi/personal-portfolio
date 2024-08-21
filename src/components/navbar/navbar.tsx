@@ -7,7 +7,7 @@ const Navbar = () => {
   const path = usePathname();
 
   return (
-    <nav className="flex justify-between border-b sticky top-0 backdrop-blur-sm z-50">
+    <nav className="flex justify-between border-b sticky top-0 backdrop-blur-sm z-50 mx-2">
       <Link
         className="p-7"
         href="/"
