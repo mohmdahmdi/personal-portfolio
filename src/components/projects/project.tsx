@@ -12,7 +12,7 @@ const Project: React.FC<IProps> = (props) => {
     >
       <div className="flex align-middle">
         <div className="basis-1/4">{props.repo.name}</div>
-        <div className="basis-2/4 break-keep text-xs text-neutral-500 pt-1">{props.repo.description}</div>
+        <div className="basis-2/4 break-keep text-xs text-neutral-500 pt-1">{(props.repo.description) || "(empty)"}</div>
         <div className="basis-1/4 text-end">
           {props.repo.created_at?.match(/\d{4}-\d{2}-\d{2}/)}
         </div>

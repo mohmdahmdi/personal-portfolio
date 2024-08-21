@@ -5,7 +5,7 @@ import ProjectsComp from './../../components/projects/projects';
 
 const Projects = () => {
   return (
-    <div className="relative h-[200vh]">
+    <div className="relative">
       <ProjectsComp />
     </div>
   );
