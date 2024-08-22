@@ -20,6 +20,10 @@ body {
   @apply px-5 cursor-pointer py-7 transition-all ease-in-out duration-500;
 }
 
+.sidebar-item{
+  @apply mr-4 my-1 px-2 py-3 cursor-pointer ;
+}
+
 .center {
   @apply top-[50%] -translate-y-[50%] left-[50%] -translate-x-1/2;
 }

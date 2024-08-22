@@ -10,7 +10,7 @@ const AdminLayout = ({
   loginPage: React.ReactNode;
 }) => {
 
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true)
   
   return isLoggedIn ? adminPanel : loginPage;
 };
