@@ -11,7 +11,7 @@ const useSort = (data: IRepos[], sortBy: string) => {
           return a.name.localeCompare(b.name);
         } else if (sortBy === "date") {
           return (
-            new Date(a.created_at).getTime() - new Date(b.created_at).getTime()
+            new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
           );
         }
         return 0;

@@ -1,16 +1,16 @@
-import { Spline } from "../lib/spline";
-import { TypeAnimation } from "../lib/typeAnimation";
+import { Spline } from "../../lib/spline";
+import { TypeAnimation } from "../../lib/typeAnimation";
 import Link from "next/link";
 import localFont from "next/font/local";
 import Image from "next/image";
-import pattern from "../assets/pngs/Pattern.png";
+import pattern from "../../assets/pngs/Pattern.png";
 
 const eastSea = localFont({
-  src: "../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
+  src: "../../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
 });
 
 const ubuntuBold = localFont({
-  src: "../assets/fonts/Ubuntu/Ubuntu-Bold.ttf",
+  src: "../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf",
 });
 
 export default function Home() {
@@ -28,10 +28,12 @@ export default function Home() {
         height={0}
         className="absolute bottom-0 left-0 -z-20"
       />
-      <div className="mt-32 ml-[17%]">
+      <div className="absolute top-1/2 -translate-y-1/2 left-[15vw]">
         <div>
           <div className="text-[3rem] translate-y-4">Hello</div>
-          <div className={`text-[5rem] ${ubuntuBold.className}`}>{`I'm M.Ahmadi`}</div>
+          <div
+            className={`text-[5rem] ${ubuntuBold.className}`}
+          >{`I'm M.Ahmadi`}</div>
         </div>
         <TypeAnimation
           sequence={[
@@ -54,7 +56,6 @@ export default function Home() {
           className="border rounded-md px-4 py-3 mt-7 inline-block fjalla hover:bg-slate-300
            hover:text-black transition-all ease-in-out duration-500 -translate-y-2 "
           href="/about"
-          
         >
           About me
         </Link>

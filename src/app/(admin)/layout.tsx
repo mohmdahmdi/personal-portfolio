@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local"
-import Navbar from "@/components/navbar/navbar";
+import "../../assets/css/globals.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const ubuntu = localFont({
-  src: "../assets/fonts/Ubuntu/Ubuntu-Regular.ttf",
+  src: "../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf",
 });
 
 export default function RootLayout({
@@ -20,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={ubuntu.className}>
-        <Navbar />
         {children}
       </body>
     </html>

@@ -21,7 +21,7 @@ body {
 }
 
 .center {
-  @apply top-[80vh] -translate-y-[50%] left-[50%] -translate-x-1/2;
+  @apply top-[50%] -translate-y-[50%] left-[50%] -translate-x-1/2;
 }
 
 ::-webkit-scrollbar {

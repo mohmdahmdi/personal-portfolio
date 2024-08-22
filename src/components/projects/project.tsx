@@ -8,7 +8,7 @@ const Project: React.FC<IProps> = (props) => {
       href={props.repo.html_url}
       onMouseEnter={() => setVisiblity(!visiblity)}
       onMouseLeave={() => setVisiblity(!visiblity)}
-      className="block relative p-5 border-b border-collapse border-neutral-800 bg-neutral-950"
+      className="block relative p-5 border-b border-collapse border-neutral-800 bg-neutral-950 transition-all"
     >
       <div className="flex align-middle">
         <div className="basis-1/4">{props.repo.name}</div>
