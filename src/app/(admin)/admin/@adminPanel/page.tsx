@@ -1,7 +1,7 @@
 
 
 const Admin = () => {
-  return ( <div>hello</div> );
+  return ( <div>hello admin pannel</div> );
 }
  
 export default Admin;
