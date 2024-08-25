@@ -1,5 +1,5 @@
 const ModifyInformation = () => {
-  return ( <div>hello modify</div> );
+  return <div className="h-[200vh]">hello modify</div>;
 }
  
 export default ModifyInformation;

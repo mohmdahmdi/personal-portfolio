@@ -36,6 +36,22 @@ body {
   @apply top-[50%] -translate-y-[50%] left-[50%] -translate-x-1/2;
 }
 
+.login-input{
+  @apply bg-black my-3 p-2 w-[350px] border border-neutral-700 rounded-md text-lg;
+  transition: all ease-in-out 0.3s;
+}
+
+.login-input + span {
+  @apply absolute left-2 top-[1.38rem] text-neutral-700;
+  transition: all ease-in-out 0.3s;
+}
+
+.login-input:focus + span,
+.login-input:not(:placeholder-shown) + span{
+  @apply absolute left-[0.6rem] top-[.27rem] text-white text-xs bg-black px-1;
+}
+
+/*############scrollbar############*/
 ::-webkit-scrollbar {
   width: 5px;
   height: 90%;
