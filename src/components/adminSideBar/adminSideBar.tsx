@@ -13,7 +13,7 @@ const AdminSideBar = () => {
   const path = usePathname()
 
   return (
-    <div className="sticky left-0 top-0 h-[100vh] border-r border-neutral-700 w-1/6 flex flex-col">
+    <div className="sticky left-0 top-0 h-[100vh] border-r border-neutral-700 w-[18%] flex flex-col">
       <div className="border-b border-neutral-800 mr-4 mb-3 pt-5 pb-2 px-2 flex ">
         <Image alt="logo" src={logo} width={40} height={40} />
         <span className="px-5 text-2xl items-center">Menu</span>
