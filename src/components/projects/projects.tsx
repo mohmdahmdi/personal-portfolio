@@ -1,13 +1,13 @@
 "use client";
 
 import useSort from "@/hooks/useSort";
-import api from "../../api/api";
+import {gitApi} from "../../api/api";
 import useAxios from "../../hooks/useAxios";
 import Project from "./project";
 import { useState } from "react";
 
 const ProjectsComp = () => {
-  const { data, loading } = useAxios(api, "/users/mohmdahmdi/repos");
+  const { data, loading } = useAxios(gitApi, "/users/mohmdahmdi/repos");
   const [sort, setSort] = useState("name");
   const sortedData = useSort(data, sort);
 

@@ -1,4 +1,4 @@
-import { IProps, IRepos } from "@/interfaces/interfaces";
+import { IProps } from "@/interfaces/interfaces";
 import { useState } from "react";
 
 const Project: React.FC<IProps> = (props) => {

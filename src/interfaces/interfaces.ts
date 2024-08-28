@@ -1,3 +1,4 @@
+
 interface IRepos {
   name: string;
   html_url?: string;
@@ -12,4 +13,16 @@ interface IProps {
   repo: IRepos;
 }
 
-export type { IRepos, options, IProps };
+interface ICreditionals {
+  username: string;
+  password: string;
+  accessType: string;
+}
+
+
+export type {
+  IRepos,
+  options,
+  IProps,
+  ICreditionals,
+};

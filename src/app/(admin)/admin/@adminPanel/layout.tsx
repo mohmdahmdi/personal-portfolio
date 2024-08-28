@@ -1,3 +1,5 @@
+"use server"
+
 import React from "react";
 import AdminSideBar from "../../../../components/adminSideBar/adminSideBar";
 import AdminHeader from '../../../../components/adminHeader/adminHeader';

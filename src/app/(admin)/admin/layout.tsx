@@ -1,6 +1,6 @@
-"use client";
 
-import { useState } from "react";
+import { checkSession } from "@/utils/(auth)/storage";
+import React from "react";
 
 const AdminLayout = ({
   adminPanel,
@@ -10,9 +10,13 @@ const AdminLayout = ({
   loginPage: React.ReactNode;
 }) => {
 
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
-  
-  return isLoggedIn ? adminPanel : loginPage;
+  //there are two ways to check login
+  //1. HOC
+  //2. cokkie *
+
+  const isLoggedIn = checkSession()
+
+  return isLoggedIn ? adminPanel : loginPage ;
 };
 
 export default AdminLayout;

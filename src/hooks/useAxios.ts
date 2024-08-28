@@ -9,7 +9,7 @@ const useAxios = (
   url: string,
   options: options = {}
 ) => {
-  const [data, setData]: [IRepos[], any] = useState([{}]);
+  const [data, setData]: [IRepos[] , any] = useState([{}]);
   const [loading, setLoading]: [boolean, any] = useState(false);
 
   const fetchData = async () => {

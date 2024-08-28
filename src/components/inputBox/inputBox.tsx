@@ -8,13 +8,23 @@ const InputBox = () => {
   const [visibility, setVisibility] = useState<boolean>(false);
 
   return (
-    <form className="mt-10">
+    <div className="mt-10">
       <div className="flex relative">
-        <input type="text" className="login-input" placeholder="" />
+        <input
+          type="text"
+          placeholder=""
+          name="username"
+          className="login-input"
+        />
         <span className="pointer-events-none">USERNAME</span>
       </div>
       <div className="flex-col relative">
-        <input type={visibility ? "text" : "password"} placeholder="" className="login-input !mb-2" />
+        <input
+          type={visibility ? "text" : "password"}
+          placeholder=""
+          name="password"
+          className="login-input !mb-2"
+        />
         <span className="pointer-events-none">PASSWORD</span>
         <span
           onClick={() => setVisibility(!visibility)}
@@ -26,7 +36,7 @@ const InputBox = () => {
           Forget password?
         </a>
       </div>
-    </form>
+    </div>
   );
 };
 

@@ -7,10 +7,19 @@ import QueryStatsIcon from "@mui/icons-material/QueryStats";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../assets/pngs/Group 1.png";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import React from "react";
+import { api } from "@/api/api";
+
 
 const AdminSideBar = () => {
   const path = usePathname()
+  const router = useRouter()
+
+  const handleRemoveSession = ()=>{
+    const res = api.post("./login/removeSession")
+    router.refresh()
+  }
 
   return (
     <div className="sticky left-0 top-0 h-[100vh] border-r border-neutral-700 w-[18%] flex flex-col">
@@ -44,20 +53,20 @@ const AdminSideBar = () => {
         }`}
       >
         <PostAddIcon />
-        <span>Add post</span>
+        <span>Posts</span>
       </Link>
 
       <Link
-        href={"/admin/add-admin"}
+        href={"/admin/admins"}
         className={`sidebar-item ${
-          path === "/admin/add-admin" ? "active-sidebar" : ""
+          path === "/admin/admins" ? "active-sidebar" : ""
         }`}
       >
         <PersonAddAltIcon />
-        <span>Add admin</span>
+        <span>Admins</span>
       </Link>
-
-      <div className="sidebar-item !mt-auto !mb-3">
+  
+      <div className="sidebar-item !mt-auto !mb-3" onClick={handleRemoveSession}>
         <LogoutIcon />
         <span>Log out</span>
       </div>
