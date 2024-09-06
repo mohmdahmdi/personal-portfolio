@@ -18,6 +18,7 @@ const AdminSideBar = () => {
 
   const handleRemoveSession = ()=>{
     const res = api.post("./login/removeSession")
+    router.push("/admin")
     router.refresh()
   }
 

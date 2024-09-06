@@ -1,5 +1,6 @@
 import { IProps } from "@/interfaces/interfaces";
 import { useState } from "react";
+import { motion } from 'framer-motion';
 
 const Project: React.FC<IProps> = (props) => {
   const [visiblity, setVisiblity] = useState(true);
@@ -17,13 +18,13 @@ const Project: React.FC<IProps> = (props) => {
           {props.repo.created_at?.match(/\d{4}-\d{2}-\d{2}/)}
         </div>
       </div>
-      <div
+      <motion.div
         className={`${
           visiblity ? "hidden" : ""
         } absolute top-0 left-0 pt-5 backdrop-blur-lg w-full h-full text-center`}
       >
         view project on github!
-      </div>
+      </motion.div>
     </a>
   );
 };
