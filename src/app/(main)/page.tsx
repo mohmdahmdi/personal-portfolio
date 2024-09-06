@@ -1,9 +1,12 @@
+"use client"
+
 import { Spline } from "../../lib/spline";
 import { TypeAnimation } from "../../lib/typeAnimation";
 import Link from "next/link";
 import localFont from "next/font/local";
 import Image from "next/image";
 import pattern from "../../assets/pngs/Pattern.png";
+import {motion} from "framer-motion"
 
 const eastSea = localFont({
   src: "../../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
@@ -16,10 +19,11 @@ const ubuntuBold = localFont({
 export default function Home() {
   return (
     <div>
+      <motion.div className="absolute left-[30%] bottom-[0%] w-[100vw] h-[100vh]" initial={{x:700}} animate={{x:0}} transition={{delay:2, duration:2}}>
       <Spline
         scene="https://prod.spline.design/GYoWaR-5AP6XM-zO/scene.splinecode"
-        className="absolute left-[30%] bottom-[0%]"
       />
+      </motion.div>
 
       <Image
         src={pattern}

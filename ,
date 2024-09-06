@@ -1,0 +1,11 @@
+function X(s: string): number {
+  const arr = s.matchAll(/\s.*/);
+  let lstWrd: string = "";
+  for(let word in arr){
+    if(word !== " "){
+      lstWrd = word
+    }
+    else continue;
+  }
+  return lstWrd.length 
+}
