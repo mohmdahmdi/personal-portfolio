@@ -1,10 +1,14 @@
-import addAdminModal from "@/components/addAdminModal/addAdmin";
+
+import addAdminModal from "@/components/manageAdmins/addAdminModal/addAdmin";
+import localFont from "next/font/local";
+import ManageAdmins from '../../../../../components/manageAdmins/manageAdmins';
 
 const Admins = () => {
+
   return (
     <div>
-      <div></div>
-      <div></div>
+      <div>admins</div>
+      <ManageAdmins />
     </div>
   );
 };
