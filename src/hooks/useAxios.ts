@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { AxiosInstance } from "axios";
-import { IRepos, options } from "../interfaces/interfaces";
+import { options } from "../interfaces/interfaces";
 
 const useAxios = (
   Instance: AxiosInstance,
   url: string,
   options: options = {}
 ) => {
-  const [data, setData]: [IRepos[] , any] = useState([{}]);
+  const [data, setData] = <any>useState([{}]);
   const [loading, setLoading]: [boolean, any] = useState(false);
 
   const fetchData = async () => {

@@ -19,10 +19,17 @@ interface ICreditionals {
   accessType: string;
 }
 
+interface IAdmin {
+  id: number,
+  username: string,
+  accessType: string
+} 
+
 
 export type {
   IRepos,
   options,
   IProps,
   ICreditionals,
+  IAdmin
 };

@@ -2,7 +2,7 @@
 import { checkSession } from "@/utils/(auth)/storage";
 import React from "react";
 
-const AdminLayout = ({
+const AdminLayout = async ({
   adminPanel,
   loginPage,
 }: {
@@ -14,7 +14,7 @@ const AdminLayout = ({
   //1. HOC
   //2. cokkie *
 
-  const isLoggedIn = checkSession()
+  const isLoggedIn = await checkSession();
 
   return isLoggedIn ? adminPanel : loginPage ;
 };

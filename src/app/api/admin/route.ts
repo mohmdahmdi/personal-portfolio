@@ -17,12 +17,21 @@ export async function POST(request: Request) {
 export async function GET() {
   const prisma = new PrismaClient();
   const admins = await prisma.Admin.findMany({
-    select:{
-      id:true,
-      username:true,
-      accessType:true
-    }
-  })
+    select: {
+      id: true,
+      username: true,
+      accessType: true,
+    },
+  });
   const opt = { status: 200, header: "application/json" };
   return NextResponse.json({ data: admins }, opt);
+}
+
+export async function DELETE(req: Request) {
+  const prisma = new PrismaClient();
+  const admin: { id: number } = await req.json();
+  const deleteAdmin = await prisma.Admin.delete({
+    where: { id : admin.id},
+  });
+  return NextResponse.json(`admin with ${admin.id} deleted!`, {});
 }
