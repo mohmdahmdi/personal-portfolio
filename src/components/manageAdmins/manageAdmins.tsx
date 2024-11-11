@@ -20,7 +20,7 @@ const ManageAdmins = () => {
     // TODO: making a good loading
     return <div>loading ...</div>;
   }
-  return addvisible ? <AddAdminModal /> : (
+  return addvisible ? <AddAdminModal state={addvisible} setState={setAddVisible} /> : (
     <div className="w-full px-3 py-4 rounded-lg bg-neutral-800 ">
       <div className="rounded-lg overflow-clip">
         {data.data.map((admin: IAdmin) => {

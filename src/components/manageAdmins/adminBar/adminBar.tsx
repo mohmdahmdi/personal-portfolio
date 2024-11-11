@@ -6,6 +6,7 @@ import EditNoteIcon from "@mui/icons-material/EditNote";
 const AdminBar: React.FC<{ admin: IAdmin }> = (props) => {
   const handleDelete = () => {
     api.delete("/admin", { data: { id: props.admin.id } });
+    window.location.reload()
   };
   return (
     <div className="flex items-center w-auto p-3 cursor-default bg-neutral-950 transition-all ease-in-out duration-500 hover:bg-neutral-900">

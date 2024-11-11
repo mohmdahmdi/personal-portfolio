@@ -1,3 +1,4 @@
+import resetAutoIncrement from "@/utils/helpers/resetAutoInc";
 import { NextResponse } from "next/server";
 
 const { PrismaClient } = require("@prisma/client");
@@ -33,5 +34,6 @@ export async function DELETE(req: Request) {
   const deleteAdmin = await prisma.Admin.delete({
     where: { id : admin.id},
   });
+  resetAutoIncrement()
   return NextResponse.json(`admin with ${admin.id} deleted!`, {});
 }
