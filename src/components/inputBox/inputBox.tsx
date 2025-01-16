@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 
-const InputBox = () => {
+const InputBox: React.FC<{ error: any }> = (props) => {
   const [visibility, setVisibility] = useState<boolean>(false);
 
   return (
@@ -32,6 +32,14 @@ const InputBox = () => {
         >
           {visibility ? <VisibilityOffIcon /> : <VisibilityIcon />}
         </span>
+        <div
+          className={`text-xs mx-1 mb-2 transition-all duration-200 ease-in-out ${
+            props.error ? "text-red-500" : "text-black"
+          }`}
+          aria-live="polite"
+        >
+          Incorrect username or password.
+        </div>
         <a href="#" className="block text-xs mx-1">
           Forget password?
         </a>
