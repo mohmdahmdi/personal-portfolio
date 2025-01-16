@@ -1,3 +1,4 @@
+import { Language } from "@mui/icons-material";
 
 interface IRepos {
   name: string;
@@ -25,11 +26,16 @@ interface IAdmin {
   accessType: string
 } 
 
+interface IInformationApi {
+  about_me : string
+}
+
 
 export type {
   IRepos,
   options,
   IProps,
   ICreditionals,
-  IAdmin
+  IAdmin,
+  IInformationApi
 };
