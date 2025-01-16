@@ -29,5 +29,34 @@ model Post {
   author Admin @relation(fields: [authorId], references: [id])
   published Boolean @default(false)
   cretedDate DateTime @default(now())
+}
 
+model info {
+  id Int @id @default(autoincrement())
+  about_me String
+}
+
+model education {
+  id Int @id @default(autoincrement())
+  title String
+  ed_from String
+  ed_to String
+  caption String
+}
+
+model hard_skill {
+  id Int @id @default(autoincrement())
+  skill String
+  caption String
+}
+
+model soft_skill {
+  id Int @id @default(autoincrement())
+  skill String
+}
+
+model language {
+  id Int @id @default(autoincrement())
+  language String
+  level String
 }
