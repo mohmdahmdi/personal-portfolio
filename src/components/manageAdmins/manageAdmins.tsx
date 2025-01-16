@@ -21,14 +21,16 @@ const ManageAdmins = () => {
     return <div>loading ...</div>;
   }
   return addvisible ? <AddAdminModal state={addvisible} setState={setAddVisible} /> : (
-    <div className="w-full px-3 py-4 rounded-lg bg-neutral-800 ">
-      <div className="rounded-lg overflow-clip">
+    <div className="w-full px-3 py-4 rounded-lg ">
+      <div className="rounded-lg grid grid-cols-4 ">
         {data.data.map((admin: IAdmin) => {
           // eslint-disable-next-line react/jsx-key
           return <AdminBar key={admin.id} admin={admin} />;
         })}
-        <div onClick={handleAddAdmin} className="text-center w-auto p-3 cursor-default bg-neutral-950 transition-all ease-in-out duration-500 hover:bg-neutral-900">
-          <AddIcon />
+        <div onClick={handleAddAdmin} 
+        className="text-center w-auto p-3 m-3 cursor-default bg-neutral-950 transition-all 
+        ease-in-out duration-500 hover:bg-neutral-900 col-span-1 border border-white rounded border-dashed justify-center relative">
+          <AddIcon className="absolute center" />
         </div>
       </div>
     </div>

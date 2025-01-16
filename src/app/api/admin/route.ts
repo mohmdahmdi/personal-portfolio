@@ -37,3 +37,16 @@ export async function DELETE(req: Request) {
   resetAutoIncrement()
   return NextResponse.json(`admin with ${admin.id} deleted!`, {});
 }
+
+export async function PUT(req: Request) {
+  const prisma = new PrismaClient();
+  const admin: { id: number, username?: string, accessType ?: string } = await req.json();
+  const update = await prisma.Admin.update({
+    where: { id: admin.id },
+    data : {
+      username : admin.username,
+      accessType : admin.accessType
+    }
+  });
+  return NextResponse.json(`admin with ${admin.id} updated!`, {});
+}
