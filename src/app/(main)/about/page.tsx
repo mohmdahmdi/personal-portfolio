@@ -1,8 +1,38 @@
+"use client";
+
+import { api } from "@/api/api";
+import useAxios from "@/hooks/useAxios";
 
 const About = () => {
+  const { data, loading } = useAxios(api, "/information");
+  const { data:hards, loading:loading1 } = useAxios(api, "/hard")
+  // Handle loading state
+  if (loading && loading1) {
+    return <div>Loading...</div>;
+  }
+
+  // Handle case where data is not yet available or empty
+  if (!data || !data.data || data.data.length === 0) {
+    return <div>No data available</div>;
+  }
+  console.log(hards)
+  if (!hards || !hards.data || hards.data.length === 0){
+    return <div>bla vla vla</div>
+  }
+
+  // Access the first item in the data array
+  const aboutMeData = data.data[0].about_me;
+  const hardSkillData = data.hards[0].skill
   return (
-    <div className="flex mt-[10%]">
-      <div className="text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima quod cum ad modi odit explicabo dolores, vero similique architecto officia obcaecati assumenda accusamus, maiores inventore placeat recusandae incidunt rerum ipsum dolorem error. Et eius corporis maiores saepe sapiente voluptatibus, asperiores molestias voluptate illum consequuntur in repellat, odio ex maxime voluptatem veniam reprehenderit atque eum optio voluptas? Recusandae aut placeat maiores tempora neque aliquam voluptate, magni quasi sunt soluta dignissimos eos temporibus natus tempore impedit eligendi sapiente doloribus commodi nemo perspiciatis ut ipsam quisquam. Voluptatem tenetur laudantium tempore recusandae eaque illo! Quis blanditiis, suscipit ducimus aliquid maiores ipsam laudantium nam ea nemo aut tenetur dolor obcaecati reprehenderit illum nostrum ratione est, esse cumque minus pariatur velit sint quas ab. Qui nulla distinctio dignissimos dolore nostrum autem ipsum dolor quas nobis illo. Molestias unde aliquam obcaecati odio alias dignissimos iure laudantium omnis dolorum nesciunt, dolor eaque distinctio incidunt praesentium sit veritatis, impedit quam architecto eveniet atque eum vitae. Totam esse, aut ipsum et cum voluptatibus sequi culpa excepturi aliquam? Expedita tempore rerum, excepturi voluptates, cum recusandae iusto ut vero repudiandae quidem quasi dignissimos pariatur in quis exercitationem veritatis qui nesciunt ex temporibus eum, quae dolorem voluptatibus doloribus iste! Assumenda rem cumque quidem.</div>
+    <div className="col-span-10 p-8">
+      <h1 id="about" className="text-2xl font-bold">
+        About me
+      </h1>
+      <div className="ml-5 mt-4">{aboutMeData}</div>
+      <h1 id="about" className="text-2xl font-bold mt-8">
+        Hard skills
+      </h1>
+      <div>{hardSkillData}</div>
     </div>
   );
 };
