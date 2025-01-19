@@ -11,5 +11,5 @@ export async function POST(request: Request) {
 export async function GET() {
   const prisma = new PrismaClient();
   const data = await prisma.hard_skill.findMany({select:{ skill: true, caption: true}});
-  return NextResponse.json(data, {status : 200});
+  return NextResponse.json({data : data}, {status : 200});
 }
