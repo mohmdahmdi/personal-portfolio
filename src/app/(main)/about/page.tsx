@@ -4,6 +4,8 @@ import { api } from "@/api/api";
 import useAxios from "@/hooks/useAxios";
 import HardSkills from '../../../components/hardSkills/hardSkill';
 import Educations from '../../../components/educations/educations';
+import SoftSkills from '../../../components/softSkills/softSkill';
+import Languages from "@/components/languages/languages";
 
 const About = () => {
   const  { data, loading } = useAxios(api, "/information");
@@ -29,10 +31,18 @@ const About = () => {
         Hard skills
       </h1>
       <HardSkills />
-      <h1 id="hard" className="text-2xl font-bold mt-8">
+      <h1 id="eductaion" className="text-2xl font-bold mt-8">
         Educations
       </h1>
       <Educations />
+      <h1 id="soft" className="text-2xl font-bold mt-8">
+        Soft skills
+      </h1>
+      <SoftSkills />
+      <h1 id="languages" className="text-2xl font-bold mt-8">
+        Languages
+      </h1>
+      <Languages />
     </div>
   );
 };
