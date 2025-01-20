@@ -6,7 +6,7 @@ const Skill: React.FC<{ index: number; skill: string; caption: string }> = (
   return (
     <li className="mb-5 list-disc">
       <h2 className="text-lg font-bold">{props.skill}</h2>
-      <div className="ml-3 mt-1">{props.caption}</div>
+      <div className="ml-3 mt-1 text-neutral-200">{props.caption}</div>
     </li>
   );
 };
