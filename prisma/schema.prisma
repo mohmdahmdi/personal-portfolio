@@ -60,3 +60,13 @@ model language {
   language String
   level String
 }
+
+model contact {
+  id Int @id @default(autoincrement())
+  whats_app String
+  gmail String
+  instagram String
+  linkedin String
+  github String
+  telegram String
+}
