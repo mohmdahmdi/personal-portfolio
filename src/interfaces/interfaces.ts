@@ -21,15 +21,23 @@ interface ICreditionals {
 }
 
 interface IAdmin {
-  id: number,
-  username: string,
-  accessType: string
-} 
-
-interface IInformationApi {
-  about_me : string
+  id: number;
+  username: string;
+  accessType: string;
 }
 
+interface IInformationApi {
+  about_me: string;
+}
+
+interface IContactData {
+  whats_app?: string;
+  gmail?: string;
+  instagram?: string;
+  linkedin?: string;
+  github?: string;
+  telegram?: string;
+}
 
 export type {
   IRepos,
@@ -37,5 +45,6 @@ export type {
   IProps,
   ICreditionals,
   IAdmin,
-  IInformationApi
+  IInformationApi,
+  IContactData,
 };
