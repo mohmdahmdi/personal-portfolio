@@ -7,8 +7,10 @@ const Admins = () => {
 
   return (
     <div>
-      <div>admins</div>
-      <ManageAdmins />
+      <div className="my-4 font-bold text-2xl ml-5">admins</div>
+      <div className="bg-neutral-950 rounded">
+        <ManageAdmins />
+      </div>
     </div>
   );
 };
