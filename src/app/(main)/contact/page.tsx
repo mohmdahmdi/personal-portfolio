@@ -1,8 +1,9 @@
-
 const Contact = () => {
   return (
     <>
-      <div className="h-[200vh]">hello contact</div>
+      <div className="">
+        <div className="text-center text-xl font font-extrabold">Contact with me!</div>
+      </div>
     </>
   );
 };
