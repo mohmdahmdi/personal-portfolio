@@ -10,3 +10,9 @@ export async function POST(req: Request) {
     status: 200,
   });
 }
+
+export async function GET() {
+  const prisma = new PrismaClient();
+  const data = await prisma.contact.findMany({ where: { id: 1 } });
+  return NextResponse.json({ data }, { status: 200 });
+}
