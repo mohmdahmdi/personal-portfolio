@@ -37,7 +37,7 @@ const SideBarItem: React.FC<{
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
           >
-            <CollapseComp data={props.data} />
+            <CollapseComp />
           </motion.div>
         )}
       </AnimatePresence>
