@@ -1,4 +1,5 @@
 import { Language } from "@mui/icons-material";
+import CollapseComp from '../components/aboutMeSidebar/collapseComp';
 
 interface IRepos {
   name: string;
@@ -39,6 +40,13 @@ interface IContactData {
   telegram?: string;
 }
 
+interface skillStore {
+  data : {data : {skill : string, caption : string}[]} | null,
+  loading : boolean,
+  error : any,
+  fetchData : any
+}
+
 export type {
   IRepos,
   options,
@@ -47,4 +55,5 @@ export type {
   IAdmin,
   IInformationApi,
   IContactData,
+  skillStore
 };
