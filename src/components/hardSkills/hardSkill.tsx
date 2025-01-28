@@ -1,10 +1,16 @@
 import { api } from "@/api/api";
 import useAxios from "@/hooks/useAxios";
 import Skill from "./skill";
+import useSkillStore from "@/store/skills";
+import { useEffect } from "react";
 
 const HardSkills = () => {
-  const { data, loading } = useAxios(api, "/hard");
+  const {data, loading, error, fetchData} : any = useSkillStore();  
 
+  useEffect(()=>{
+    fetchData("http://localhost:3000/api/hard");
+  },[fetchData])
+  
   if (loading) {
     return <div>Loading...</div>;
   }
