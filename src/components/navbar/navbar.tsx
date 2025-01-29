@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import logo from "../../assets/pngs/Group 1.png";
 import Image from "next/image";
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material";
 
@@ -48,7 +48,7 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <div className="relative mr-3 mb-2 text-xl">
+      <div className="relative mr-3 mb-2 text-xl sm:hidden">
         <div className="mt-5">
           <motion.button
             onClick={() => {
@@ -67,8 +67,8 @@ const Navbar = () => {
                 showNav ? "" : "hidden"
               }`}
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height:'0' }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: "0" }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Link
