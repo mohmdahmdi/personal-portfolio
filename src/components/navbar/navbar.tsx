@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="flex justify-between border-b sticky top-0 backdrop-blur-sm z-50 mx-2"
+      className="row-span-1 flex justify-between border-b sticky top-0 backdrop-blur-sm z-50 mx-2"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "tween", ease: "easeInOut" }}

@@ -18,7 +18,7 @@ const ubuntuBold = localFont({
 
 export default function Home() {
   return (
-    <div className="w-[100vw] h-auto">
+    <div className="w-[100vw] row-span-8">
       <motion.div className="absolute sm:left-[30%]  bottom-[0%] w-[100vw] h-[100vh]" initial={{x:700}} animate={{x:0}} transition={{delay:2, duration:2}}>
       <Spline
         className="-translate-x-[60%] sm:translate-x-0 overflow-visible"

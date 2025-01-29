@@ -5,7 +5,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='grid grid-cols-12'>
+    <div className='row-span-8 grid grid-cols-12'>
       <AboutMeSideBar />
       {children}
     </div>

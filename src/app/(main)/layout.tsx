@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ubuntu.className}>
+      <body className={`grid-rows-9 ${ubuntu.className}`}>
         <Navbar />
         {children}
       </body>
