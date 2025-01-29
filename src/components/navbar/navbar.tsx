@@ -54,7 +54,7 @@ const Navbar = () => {
             onClick={() => {
               setShowNav(!showNav);
             }}
-            whileTap={{ rotate: 360 }}
+            animate={{ rotate: showNav ? 360 : 0 }}
             transition={{ type: "tween", ease: "easeInOut" }}
           >
             {showNav ? <Close /> : <Menu />}
