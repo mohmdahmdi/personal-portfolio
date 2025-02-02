@@ -1,4 +1,4 @@
-import AboutMeSideBar from '../../../components/aboutMeSidebar/aboutMeSidebar';d
+import AboutMeSideBar from '../../../components/aboutMeSidebar/aboutMeSidebar';
 export default function RootLayout({
   children,
 }: Readonly<{
