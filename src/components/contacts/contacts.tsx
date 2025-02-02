@@ -26,7 +26,7 @@ const Contatcs = () => {
     data: [
       {
         id: 1,
-        whats_app: "+98-905-094-8148",
+        whats_app: "+989050948148",
         gmail: "mohammad.pr285@gmail.com",
         instagram: "imohmdahmdi",
         linkedin: "mhmdahmdi",
@@ -38,7 +38,7 @@ const Contatcs = () => {
   const contacts: IContactData = data.data[0];  
   return (
     <div className="grid grid-cols-4">
-      <div className="col-start-2 col-span-2 grid grid-cols-2">
+      <div className=" col-start-1 col-span-4  md:col-start-2 md:col-span-2 grid grid-cols-1 md:grid-cols-2">
         <Contact social={contacts.github} icon={<GitHub />} />
         <Contact social={contacts.gmail} icon={<Google />} />
         <Contact social={contacts.whats_app} icon={<WhatsApp />} />
