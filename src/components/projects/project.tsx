@@ -1,6 +1,6 @@
 import { IProps } from "@/interfaces/interfaces";
 import { useState } from "react";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Project: React.FC<IProps> = (props) => {
   const [visiblity, setVisiblity] = useState(true);
@@ -11,10 +11,14 @@ const Project: React.FC<IProps> = (props) => {
       onMouseLeave={() => setVisiblity(!visiblity)}
       className="block relative p-5 border-b border-collapse border-neutral-800 bg-neutral-950 transition-all"
     >
-      <div className="flex align-middle">
-        <div className="basis-1/4">{props.repo.name}</div>
-        <div className="basis-2/4 break-keep text-xs text-neutral-500 pt-1">{(props.repo.description) || "(empty)"}</div>
-        <div className="basis-1/4 text-end">
+      <div className="grid grid-cols-1 sm:grid-cols-3 align-middle">
+        <div className="col-span-1 sm:col-span-1 text-center sm:text-left">
+          {props.repo.name}
+        </div>
+        <div className="col-span-1 text-center sm:text-left sm:col-span-1 text-xs text-neutral-500 pt-1 truncate ">
+          {props.repo.description || "(empty)"}
+        </div>
+        <div className="col-span-1 text-center sm:text-end sm:col-span-1">
           {props.repo.created_at?.match(/\d{4}-\d{2}-\d{2}/)}
         </div>
       </div>

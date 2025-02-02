@@ -2,7 +2,7 @@ import ProjectsComp from "../../../components/projects/projects";
 
 const Projects = () => {
   return (
-    <div className="relative h-[calc(100vh-82px)]">
+    <div className="relative h-[88vh]">
       <ProjectsComp />
     </div>
   );

@@ -12,7 +12,7 @@ const ProjectsComp = () => {
     gitApi,
     "/users/mohmdahmdi/repos"
   );
-  const [sort, setSort] = useState("name");
+  const [sort, setSort] = useState("date");
   const sortedData = useSort(data, sort);
 
   return (
@@ -45,10 +45,10 @@ const ProjectsComp = () => {
               </div>
             </div>
             <div className="absolute overflow-y-scroll rounded-md w-full h-[69vh]">
-              {sortedData.map((element) => {
+              {sortedData.map((element, index) => {
                 return (
                   <>
-                    <Project repo={element} />
+                    <Project key={index} repo={element} />
                   </>
                 );
               })}
