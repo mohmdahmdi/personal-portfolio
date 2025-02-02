@@ -5,22 +5,22 @@ import useSkillStore from "@/store/skills";
 import { useEffect } from "react";
 
 const HardSkills = () => {
-  const {data, loading, error, fetchData} : any = useSkillStore();  
+  const { data, loading, error, fetchData }: any = useSkillStore();
+  // use this part if you want use dynamic data from database
+  //////////////////////////////////////////////////
+  // useEffect(()=>{
+  //   fetchData("http://localhost:3000/api/hard");
+  // },[fetchData])
 
-  useEffect(()=>{
-    fetchData("http://localhost:3000/api/hard");
-  },[fetchData])
-  
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  // Handle case where data is not yet available or empty
-  if (!data || !data.data) {
-    return <div>No data available</div>;
-  }
+  // if (!data || !data.data) {
+  //   return <div>No data available</div>;
+  // }
+  //////////////////////////////////////////////////
 
-  // Access the first item in the data array
   const hardSkills: { skill: string; caption: string }[] = data.data;
 
   return (

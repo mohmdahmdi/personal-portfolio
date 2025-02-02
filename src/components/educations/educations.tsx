@@ -3,18 +3,30 @@ import useAxios from "@/hooks/useAxios";
 import Education from "./education";
 
 const Educations = () => {
-  const { data, loading } = useAxios(api, "/education");
+  // use this part if you want to use dynamic data from database
+  /////////////////////////////////////////////////////////
+  // const { data, loading } = useAxios(api, "/education");
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  // Handle case where data is not yet available or empty
-  if (!data || !data.data) {
-    return <div>No data available</div>;
-  }
+  // if (!data || !data.data) {
+  //   return <div>No data available</div>;
+  // }
+  /////////////////////////////////////////////////////////
+  // the response of /education api
+  const data = {
+    data: [
+      {
+        title: "Uiversity of Isfahan",
+        ed_from: "2022",
+        ed_to: "present",
+        caption: "Bachelor's degree in Computer Science",
+      },
+    ],
+  };
 
-  // Access the first item in the data array
   const educations: {
     title: string;
     ed_from: string;

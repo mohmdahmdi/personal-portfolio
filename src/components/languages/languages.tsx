@@ -3,18 +3,31 @@ import useAxios from "@/hooks/useAxios";
 import Language from "./language";
 
 const Languages = () => {
-  const { data, loading } = useAxios(api, "/language");
+  /////////////////////////////////////////////////////////
+  // const { data, loading } = useAxios(api, "/language");
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  // Handle case where data is not yet available or empty
-  if (!data || !data.data) {
-    return <div>No data available</div>;
-  }
+  // if (!data || !data.data) {
+  //   return <div>No data available</div>;
+  // }
+  /////////////////////////////////////////////////////////
+  // the response from the server
+  const data = {
+    data: [
+      {
+        language: "English",
+        level: "Upper intermediate",
+      },
+      {
+        language: "Persian",
+        level: "Mother tongue",
+      },
+    ],
+  };
 
-  // Access the first item in the data array
   const languages: { language: string; level: string }[] = data.data;
 
   return (

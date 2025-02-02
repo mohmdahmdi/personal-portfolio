@@ -8,18 +8,26 @@ import SoftSkills from '../../../components/softSkills/softSkill';
 import Languages from "@/components/languages/languages";
 
 const About = () => {
-  const  { data, loading } = useAxios(api, "/information");
-  // Handle loading state
-  if (loading ) {
-    return <div>Loading...</div>;
-  }
+  // use this if ypu want to use data from database
+  ////////////////////////////////////////////////////////////
+  // const  { data, loading } = useAxios(api, "/information");
+  // if (loading ) {
+  //   return <div>Loading...</div>;
+  // }
 
-  // Handle case where data is not yet available or empty
-  if (!data || !data.data || data.data.length === 0) {
-    return <div>No data available</div>;
-  }
-
-  // Access the first item in the data array
+  // if (!data || !data.data || data.data.length === 0) {
+  //   return <div>No data available</div>;
+  // }
+  ////////////////////////////////////////////////////////////
+  // this is the response of /information api
+  const data = {
+    data: [
+      {
+        about_me:
+          "I’m a highly motivated and fast-learning Front-End Developer and eager to contribute to a company that shares the same vision of growth and progress. My expertise in React.js, Next.js, and modern web technologies enables me to deliver clean, efficient, and scalable code. I have a deep understanding of my craft and thrive on problem-solving, applying design patterns and SOLID principles to create robust solutions.\nCollaboration is at the core of my work style, and I’m adept at working alongside backend teams thanks to my knowledge of RESTful APIs and expertise in SQL. I am also proficient in using Jira for effective project management and task tracking.\nI am seeking a position in an environment where both my personal growth and contributions to the team align, ensuring a mutually beneficial path toward success.",
+      },
+    ],
+  };
   const aboutMeData = data.data[0].about_me;
   return (
     <div className="col-span-10 p-8">

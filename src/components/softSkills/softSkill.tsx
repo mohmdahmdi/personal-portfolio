@@ -3,18 +3,50 @@ import useAxios from "@/hooks/useAxios";
 import Soft from "./soft";
 
 const SoftSkills = () => {
-  const { data, loading } = useAxios(api, "/soft");
+  // use this part if you want to use dynamic data from database
+  /////////////////////////////////////////////////////
+  // const { data, loading } = useAxios(api, "/soft");
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div>Loading...</div>;
+  // }
 
-  // Handle case where data is not yet available or empty
-  if (!data || !data.data) {
-    return <div>No data available</div>;
-  }
-
-  // Access the first item in the data array
+  // if (!data || !data.data) {
+  //   return <div>No data available</div>;
+  // }
+  /////////////////////////////////////////////////////
+  // this is the response from the server
+  const data = {
+    data: [
+      {
+        skill: "Collaborative",
+      },
+      {
+        skill: "Adaptable",
+      },
+      {
+        skill: "Team-oriented",
+      },
+      {
+        skill: "Effective",
+      },
+      {
+        skill: "Emotionally intelligent",
+      },
+      {
+        skill: "Analytical",
+      },
+      {
+        skill: "Effective Communication",
+      },
+      {
+        skill: "Critical Thinking",
+      },
+      {
+        skill: "Flexible",
+      },
+    ],
+  };
   const softSkills: { skill: string }[] = data.data;
 
   return (
