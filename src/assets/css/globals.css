@@ -21,7 +21,10 @@ body {
 }
 
 .nav-item-col {
-  @apply text-sm py-2
+  @apply text-neutral-400 text-sm py-4 border-b border-neutral-900 pl-4 
+}
+.active-col {
+  @apply text-white
 }
 
 .sidebar-item {

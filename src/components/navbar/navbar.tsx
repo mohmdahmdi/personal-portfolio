@@ -48,7 +48,7 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
-      <div className="relative mr-3 mb-2 text-xl sm:hidden">
+      <div className="mr-3 mb-2 text-xl sm:hidden">
         <div className="mt-5">
           <motion.button
             onClick={() => {
@@ -63,12 +63,12 @@ const Navbar = () => {
         <AnimatePresence>
           {showNav && (
             <motion.div
-              className={`absolute flex flex-col right-7 bg-black border rounded px-4 ${
+              className={`absolute flex flex-col left-0 bg-neutral-950 bg-opacity-90 right-0 top-[82px] -bottom-[88vh] ${
                 showNav ? "" : "hidden"
               }`}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: "0" }}
+              exit={{ opacity: 0, height: "0" }} 
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Link
