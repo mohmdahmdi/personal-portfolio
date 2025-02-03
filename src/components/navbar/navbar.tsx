@@ -75,7 +75,10 @@ const Navbar = () => {
                 href="/experience"
                 className={`nav-item-col ${
                   path == "/experience" ? "active-col" : ""
-                }`}
+                }`
+              
+              }
+              onClick={()=>setShowNav(!showNav)}
               >
                 Experience
               </Link>
@@ -83,7 +86,10 @@ const Navbar = () => {
                 href="/projects"
                 className={`nav-item-col ${
                   path == "/projects" ? "active-col" : ""
-                }`}
+                }`
+              
+              }
+              onClick={()=>setShowNav(!showNav)}
               >
                 Projects
               </Link>
@@ -91,7 +97,10 @@ const Navbar = () => {
                 href="/about"
                 className={`nav-item-col ${
                   path == "/about" ? "active-col" : ""
-                }`}
+                }`
+              
+              }
+              onClick={()=>setShowNav(!showNav)}
               >
                 About
               </Link>
@@ -99,7 +108,10 @@ const Navbar = () => {
                 href="/contact"
                 className={`nav-item-col ${
                   path == "/contact" ? "active-col" : ""
-                }`}
+                }`
+              
+              }
+              onClick={()=>setShowNav(!showNav)}
               >
                 Contact
               </Link>
