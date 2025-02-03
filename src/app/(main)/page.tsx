@@ -47,9 +47,9 @@ export default function Home() {
             repeat={Infinity}
           />
         </div>
-        <div className="flex justify-between sm:justify-normal">
+        <div className="flex justify-between sm:justify-normal z-10">
           <Link
-            className="border rounded-md px-4 py-3 mt-7 block fjalla hover:bg-slate-300
+            className="border rounded-md px-4 py-3 mt-7 block fjalla hover:bg-slate-300 z-10
            hover:text-black transition-all ease-in-out duration-500 -translate-y-2 sm:mr-3"
             href="/about"
           >
@@ -57,21 +57,21 @@ export default function Home() {
           </Link>
           <Link
             className="border rounded-md px-4 py-3 mt-7 block fjalla hover:bg-inherit hover:text-slate-300 bg-slate-300
-           text-black transition-all ease-in-out duration-500 -translate-y-2 "
-            href="/contatc"
+           text-black transition-all ease-in-out duration-500 -translate-y-2 z-10"
+            href="/contact"
           >
             Contact
           </Link>
         </div>
       </div>
       <motion.div
-        className="absolute sm:left-[30%] left-0  bottom-[0%] w-[100vw] h-[100vh] sm:scale-75 overflow-clip"
+        className="absolute sm:left-[30%] left-0  bottom-[0%] w-[100vw] h-[100vh] sm:scale-75 overflow-clip -z-10"
         initial={{ x: 700 }}
         animate={{ x: 0 }}
         transition={{ delay: 2, duration: 2 }}
       >
         <Spline
-          className="absolut"
+          className="absolut -z-10"
           scene="https://prod.spline.design/GYoWaR-5AP6XM-zO/scene.splinecode"
         />
       </motion.div>
