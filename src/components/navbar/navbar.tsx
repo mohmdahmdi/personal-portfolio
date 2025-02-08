@@ -49,7 +49,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="mr-3 mb-2 text-xl sm:hidden">
-        <div className="mt-5">
+        <div className="mt-[1.3rem] mr-2">
           <motion.button
             onClick={() => {
               setShowNav(!showNav);

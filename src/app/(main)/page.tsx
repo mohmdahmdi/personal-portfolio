@@ -28,7 +28,7 @@ export default function Home() {
             className={`text-[3rem] text-center sm:text-left sm:text-[5rem] ${ubuntuBold.className}`}
           >{`I'm M.Ahmadi`}</div>
         </div>
-        <div className="text-center text-xs sm:text-xl sm:text-left ">
+        <div className="text-center text-xs sm:text-xl sm:text-left bg-black sm:bg-inherit">
           <TypeAnimation
             sequence={[
               "I'm a programmer.",
