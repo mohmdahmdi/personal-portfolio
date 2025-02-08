@@ -13,14 +13,14 @@ export default function RootLayout({
     <div className="row-span-8 grid grid-cols-12">
       <AboutMeSideBar side={side} setSide={setSide} />
       <div
-        className={`absolute left-[${side ? '25' : '25'}%] cursor-pointer z-20`}
+        className={`absolute left-[${side ? "25" : "25"}%] cursor-pointer z-20`}
         onClick={() => {
-          setSide(!side)
+          setSide(!side);
         }}
       >
         {side ? <NavigateBefore /> : <NavigateNext />}
       </div>
-      {children}
+      <div className={`${side ? 'col-span-10' : 'col-span-12'}`}>{children}</div>
     </div>
   );
 }
