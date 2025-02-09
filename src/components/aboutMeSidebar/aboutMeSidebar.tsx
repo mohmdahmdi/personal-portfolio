@@ -17,8 +17,12 @@ const AboutMeSideBar: React.FC<{ side: boolean; setSide: any }> = (props) => {
   return (
     <AnimatePresence>
       {props.side && (
-        <div
-          className="h-[89vh] top-[11vh] border-r col-span-2 sticky bottom-0 overflow-hidden"
+        <motion.div
+          initial={{ opacity: 0, translateX: -200 }}
+          animate={{ opacity: 1, translateX: 0 }}
+          exit={{ opacity: 0, translateX: -200 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }}
+          className="h-[89vh] top-[11vh] border-r md:col-span-2 sticky bottom-0 overflow-hidden w-[50vw] md:w-auto bg-black"
         >
           <SideBarItem href="#about" name="About me" icon={<PersonSearch />} />
           <SideBarItem
@@ -35,7 +39,7 @@ const AboutMeSideBar: React.FC<{ side: boolean; setSide: any }> = (props) => {
             name="Languages"
             icon={<Translate />}
           />
-        </div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
