@@ -30,7 +30,7 @@ const About = () => {
   };
   const aboutMeData = data.data[0].about_me;
   return (
-    <div className="py-8 px-1 md:px-4 text-sm">
+    <div className=" pb-8 px-1 md:px-4 text-sm">
       <h1 id="about" className="text-2xl font-bold">
         About me
       </h1>
