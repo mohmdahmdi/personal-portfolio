@@ -21,14 +21,18 @@ export default function RootLayout({
     <div className="row-span-8 grid grid-cols-12">
       <AboutMeSideBar side={side} setSide={setSide} />
       <div
-        className={`sticky top-[50%]  cursor-pointer md:invisible`}
+        className={`fixed top-[50vh] left-0 cursor-pointer md:invisible`}
         onClick={() => {
           setSide(!side);
         }}
       >
         {side ? <NavigateBefore /> : <NavigateNext />}
       </div>
-      <div className={`${side ? "col-span-10" : "col-span-12"} md:col-span-10 h-89vh`}>
+      <div
+        className={`${
+          "col-span-12"
+        } md:col-span-10 h-89vh`}
+      >
         {children}
       </div>
     </div>
