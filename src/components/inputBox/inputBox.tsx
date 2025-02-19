@@ -8,22 +8,22 @@ const InputBox: React.FC<{ error: any }> = (props) => {
   const [visibility, setVisibility] = useState<boolean>(false);
 
   return (
-    <div className="mt-10">
-      <div className="flex relative">
+    <div className="mt-10 w-full">
+      <div className="flex relative w-full">
         <input
           type="text"
           placeholder=""
           name="username"
-          className="login-input"
+          className="login-input max-w-full"
         />
         <span className="pointer-events-none">USERNAME</span>
       </div>
-      <div className="flex-col relative">
+      <div className="flex-col relative w-full">
         <input
           type={visibility ? "text" : "password"}
           placeholder=""
-          name="password"
-          className="login-input !mb-2"
+          name="password w-full"
+          className="login-input !mb-2 max-w-full"
         />
         <span className="pointer-events-none">PASSWORD</span>
         <span

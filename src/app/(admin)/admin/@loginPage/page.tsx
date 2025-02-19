@@ -20,7 +20,7 @@ const Login = () => {
     <>
       <form
         action={action}
-        className="absolute center flex flex-col items-center border border-dashed rounded-md py-10 px-6"
+        className="w-[90vw] sm:w-auto absolute center flex flex-col items-center border border-dashed rounded-md py-10 px-6"
       >
         <Image alt="logo" src={logo} width={80} height={80} />
         <div className="text-3xl font-bold">Login page</div>
