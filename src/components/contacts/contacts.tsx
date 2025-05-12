@@ -26,12 +26,12 @@ const Contatcs = () => {
     data: [
       {
         id: 1,
-        whats_app: "+989050948148",
-        gmail: "mohammad.pr285@gmail.com",
-        instagram: "imohmdahmdi",
-        linkedin: "mhmdahmdi",
+        whats_app: "...",
+        gmail: "...",
+        instagram: "...",
+        linkedin: "...",
         github: "mohmdahmdi",
-        telegram: "jouyaaa",
+        telegram: "...",
       },
     ],
   };
