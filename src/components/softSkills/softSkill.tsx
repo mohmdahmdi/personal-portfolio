@@ -50,7 +50,7 @@ const SoftSkills = () => {
   const softSkills: { skill: string }[] = data.data;
 
   return (
-    <ul className="grid grid-cols-4 ml-5 mt-4 gap-2">
+    <ul className="grid grid-cols-4 max-lg:mx-3 mx-5 mt-4 gap-2">
       {softSkills.map((element, index) => {
         return <Soft key={index} skill={element.skill} />;
       })}

@@ -12,7 +12,7 @@ export default function RootLayout({
   const [side, setSide] = useState<boolean>(false);
   const size = useWindowSize();
   useEffect(() => {
-    if (size?.width && size?.width > 738) {
+    if (size?.width && size?.width > 1024) {
       setSide(true);
     }
   }, [size]);
@@ -20,17 +20,8 @@ export default function RootLayout({
   return (
     <div className="h-full flex">
       <AboutMeSideBar side={side} setSide={setSide} />
-      {/* <div
-        className={`fixed top-[50vh]  cursor-pointer md:invisible`}
-        onClick={() => {
-          setSide(!side);
-        }}
-      >
-        {side ? <NavigateBefore /> : <NavigateNext />}
-      </div> */}
-      <div
-        className='h-full w-11/12 overflow-scroll'
-      >
+      <div className={`h-full overflow-scroll w-full`}>
+        
         {children}
       </div>
     </div>
