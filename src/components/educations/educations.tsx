@@ -22,6 +22,12 @@ const Educations = () => {
         title: "Uiversity of Isfahan",
         ed_from: "2022",
         ed_to: "present",
+        caption: "Bachelor's degree in Computer Science. I like pure computer science fields like theory of computation or copmputation complexity theorem. ",
+      },
+      {
+        title: "Uiversity of Isfahan",
+        ed_from: "2022",
+        ed_to: "present",
         caption: "Bachelor's degree in Computer Science",
       },
     ],
@@ -35,7 +41,7 @@ const Educations = () => {
   }[] = data.data;
 
   return (
-    <ul>
+    <ul className="grid grid-cols-3">
       {educations.map((element, index) => {
         return (
           <Education

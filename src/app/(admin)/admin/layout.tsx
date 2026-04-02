@@ -16,7 +16,7 @@ const AdminLayout = async ({
 
   const isLoggedIn = await checkSession();
 
-  return isLoggedIn ? adminPanel : loginPage ;
+  return adminPanel  ;
 };
 
 export default AdminLayout;

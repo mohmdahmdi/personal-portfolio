@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`grid-rows-9 ${ubuntu.className}`}>
+      <body className={`h-[100vh]${ubuntu.className} overflow-hidden`}>
         <Navbar />
-        {children}
+        <div className="h-[90vh]">{children}</div>
       </body>
     </html>
   );

@@ -18,20 +18,18 @@ export default function RootLayout({
   }, [size]);
 
   return (
-    <div className="row-span-8 grid grid-cols-12">
+    <div className="h-full flex">
       <AboutMeSideBar side={side} setSide={setSide} />
-      <div
-        className={`fixed top-[50vh] left-0 cursor-pointer md:invisible`}
+      {/* <div
+        className={`fixed top-[50vh]  cursor-pointer md:invisible`}
         onClick={() => {
           setSide(!side);
         }}
       >
         {side ? <NavigateBefore /> : <NavigateNext />}
-      </div>
+      </div> */}
       <div
-        className={`${
-          "col-span-12"
-        } md:col-span-10 h-89vh`}
+        className='h-full w-11/12 overflow-scroll'
       >
         {children}
       </div>

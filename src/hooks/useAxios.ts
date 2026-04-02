@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import { AxiosInstance } from "axios";
@@ -7,9 +7,10 @@ import { options } from "../interfaces/interfaces";
 const useAxios = (
   Instance: AxiosInstance,
   url: string,
-  options: options = {}
+  options: options = {},
 ) => {
   const [data, setData] = <any>useState([{}]);
+  const [error, setError] = useState<boolean>(false);
   const [loading, setLoading]: [boolean, any] = useState(false);
 
   const fetchData = async () => {
@@ -17,6 +18,9 @@ const useAxios = (
     try {
       const response = await Instance.get(url, options);
       setData(response.data);
+    } catch (err) {
+      setError(true)
+      setLoading(false)
     } finally {
       setLoading(false);
     }
@@ -24,10 +28,10 @@ const useAxios = (
 
   useEffect(() => {
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { data, loading };
+  return { data, loading, error };
 };
 
 export default useAxios;

@@ -7,7 +7,7 @@ const Education: React.FC<{
   caption: string;
 }> = (props) => {
   return (
-    <li className="ml-5 mt-4">
+    <li className="ml-5 mt-4 border border-dashed rounded-2xl p-4 ">
       <div className="text-xl font-bold">{props.title}</div>
       <div className="text-xs text-neutral-500">{props.ed_from}{" - "}{props.ed_to}</div>
       <div className="mt-1">{props.caption}</div>

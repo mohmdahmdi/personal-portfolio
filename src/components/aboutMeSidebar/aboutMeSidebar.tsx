@@ -22,7 +22,7 @@ const AboutMeSideBar: React.FC<{ side: boolean; setSide: any }> = (props) => {
           animate={{ opacity: 1, translateX: 0 }}
           exit={{ opacity: 0, translateX: -200 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="h-[89vh] top-[11vh] border-r md:col-span-2 fixed md:sticky left-0 overflow-hidden w-[50vw] md:w-auto bg-black"
+          className="h-full border-r overflow-hidden w-2/12 bg-black"
         >
           <SideBarItem href="#about" name="About me" icon={<PersonSearch />} />
           <SideBarItem

@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material";
+import { eastSea } from "@/app/(main)/page";
 
 const Navbar = () => {
   const path = usePathname();
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="row-span-1 flex justify-between border-b sticky top-0 backdrop-blur-sm z-50 mx-2"
+      className="h-[10vh] flex justify-between border-b sticky top-0 backdrop-blur-sm z-50 mx-2"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "tween", ease: "easeInOut" }}
@@ -23,6 +24,12 @@ const Navbar = () => {
         <Image alt="logo" src={logo} width={25} height={25} />
       </Link>
       <div className="hidden sm:flex">
+        <Link
+          href="/blogs"
+          className={`nav-item ${path == "/blogs" ? "active" : ""} ${eastSea.className} text-2xl -translate-y-[3px]`}
+        >
+          Bullshits
+        </Link>
         <Link
           href="/experience"
           className={`nav-item ${path == "/experience" ? "active" : ""}`}
@@ -68,17 +75,15 @@ const Navbar = () => {
               }`}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: "0" }} 
+              exit={{ opacity: 0, height: "0" }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <Link
                 href="/experience"
                 className={`nav-item-col ${
                   path == "/experience" ? "active-col" : ""
-                }`
-              
-              }
-              onClick={()=>setShowNav(!showNav)}
+                }`}
+                onClick={() => setShowNav(!showNav)}
               >
                 Experience
               </Link>
@@ -86,10 +91,8 @@ const Navbar = () => {
                 href="/projects"
                 className={`nav-item-col ${
                   path == "/projects" ? "active-col" : ""
-                }`
-              
-              }
-              onClick={()=>setShowNav(!showNav)}
+                }`}
+                onClick={() => setShowNav(!showNav)}
               >
                 Projects
               </Link>
@@ -97,10 +100,8 @@ const Navbar = () => {
                 href="/about"
                 className={`nav-item-col ${
                   path == "/about" ? "active-col" : ""
-                }`
-              
-              }
-              onClick={()=>setShowNav(!showNav)}
+                }`}
+                onClick={() => setShowNav(!showNav)}
               >
                 About
               </Link>
@@ -108,10 +109,8 @@ const Navbar = () => {
                 href="/contact"
                 className={`nav-item-col ${
                   path == "/contact" ? "active-col" : ""
-                }`
-              
-              }
-              onClick={()=>setShowNav(!showNav)}
+                }`}
+                onClick={() => setShowNav(!showNav)}
               >
                 Contact
               </Link>

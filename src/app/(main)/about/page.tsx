@@ -2,10 +2,11 @@
 
 import { api } from "@/api/api";
 import useAxios from "@/hooks/useAxios";
-import HardSkills from '../../../components/hardSkills/hardSkill';
-import Educations from '../../../components/educations/educations';
-import SoftSkills from '../../../components/softSkills/softSkill';
+import HardSkills from "../../../components/hardSkills/hardSkill";
+import Educations from "../../../components/educations/educations";
+import SoftSkills from "../../../components/softSkills/softSkill";
 import Languages from "@/components/languages/languages";
+import { eastSea } from "../page";
 
 const About = () => {
   // use this if ypu want to use data from database
@@ -30,11 +31,11 @@ const About = () => {
   };
   const aboutMeData = data.data[0].about_me;
   return (
-    <div className=" pb-8 pt-5 px-1 md:px-4 text-sm">
+    <div className=" pb-8 pt-5 px-1 md:px-10 text-sm">
       <h1 id="about" className="text-2xl font-bold">
         About me
       </h1>
-      <div className="ml-5 mt-4 text-pretty">{aboutMeData}</div>
+      <div className={`ml-1 mt-4 bg-neutral-950 rounded-2xl p-4 text-justify text-2xl ${eastSea.className}`}>{aboutMeData}</div>
       <h1 id="hard" className="text-2xl font-bold mt-8">
         Hard skills
       </h1>
