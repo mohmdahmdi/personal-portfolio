@@ -114,6 +114,15 @@ const Navbar = () => {
               >
                 Contact
               </Link>
+              <Link
+                href="/blogs"
+                className={`nav-item-col !text-xl ${eastSea.className} ${
+                  path == "/blogs" ? "active-col" : ""
+                }`}
+                onClick={() => setShowNav(!showNav)}
+              >
+                Bullshits
+              </Link>
             </motion.div>
           )}
         </AnimatePresence>
