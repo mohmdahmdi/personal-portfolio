@@ -17,7 +17,7 @@ export const blogs: Blog[] = [
       "bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly.",
     author: "mohammad ahmadi",
     date: new Date(),
-    imageName: "hello.jpg",
+    imageName: "2.jpg",
   },
   {
     id: 3,
@@ -44,6 +44,6 @@ export const blogs: Blog[] = [
       "bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly. bla nabla how to bullshit to peaple and lie to them, and exactly this is what i want. to break their heart and to steel their brains, i know. it looks horrible but trust me this is the best way that you can control someone or sth. again and again i shoud tell to trust no one except familly.",
     author: "mohammad ahmadi",
     date: new Date(),
-    imageName: "hello.jpg",
+    imageName: "2.jpg",
   },
 ];

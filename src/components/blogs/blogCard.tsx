@@ -10,10 +10,10 @@ const BlogCard = (blog: Blog & { idx: number }) => {
   return (
     <Link
       href={`/blogs/${blog.id}`}
-      className={`flex ${blog.idx % 2 === 0 ? "" : "flex-row-reverse"} bg-neutral-950 hover:bg-neutral-900 transition-all cursor-pointer rounded-2xl overflow-hidden h-52`}
+      className={`flex max-md:items-center max-md:flex-col ${blog.idx % 2 === 0 ? "" : "md:flex-row-reverse"} bg-neutral-950 hover:bg-neutral-900 transition-all cursor-pointer rounded-2xl overflow-hidden`}
     >
-      <div className="h-52 w-52 relative shrink-0 ">
-        <Image src={`/${blog.imageName}`} alt={blog.title} fill />
+      <div className="w-[30vh] h-[30vh] md:h-52 md:w-52 relative shrink-0 max-md:rounded-2xl overflow-hidden max-md:my-5">
+        <Image src={`/${blog.imageName}`} alt={blog.title} fill/>
       </div>
       <div className="px-4 py-2 flex flex-col justify-between">
         <h2 className=" text-xl font-semibold">{blog.title}</h2>
