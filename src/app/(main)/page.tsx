@@ -8,10 +8,8 @@ import Image from "next/image";
 import pattern from "../../assets/pngs/Pattern.png";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { eastSea } from "@/assets/fonts/eastSea";
 
-export const eastSea = localFont({
-  src: "../../assets/fonts/East_Sea_Dokdo/EastSeaDokdo-Regular.ttf",
-});
 
 const ubuntuBold = localFont({
   src: "../../assets/fonts/Ubuntu/Ubuntu-Bold.ttf",

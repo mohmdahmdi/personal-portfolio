@@ -3,9 +3,9 @@
 import { Blog } from "@/interfaces/blog";
 import React from "react";
 import Image from "next/image";
-import { eastSea } from "@/app/(main)/page";
 import Link from "next/link";
 import Linked from "@mui/icons-material/Link";
+import { eastSea } from "@/assets/fonts/eastSea";
 const BlogCard = (blog: Blog & { idx: number }) => {
   return (
     <Link

@@ -6,7 +6,7 @@ import HardSkills from "../../../components/hardSkills/hardSkill";
 import Educations from "../../../components/educations/educations";
 import SoftSkills from "../../../components/softSkills/softSkill";
 import Languages from "@/components/languages/languages";
-import { eastSea } from "../page";
+import { eastSea } from "@/assets/fonts/eastSea";
 
 const About = () => {
   // use this if ypu want to use data from database

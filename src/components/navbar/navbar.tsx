@@ -7,7 +7,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material";
-import { eastSea } from "@/app/(main)/page";
+import { eastSea } from "@/assets/fonts/eastSea";
 
 const Navbar = () => {
   const path = usePathname();
